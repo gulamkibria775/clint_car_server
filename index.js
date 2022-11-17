@@ -154,8 +154,8 @@ app.use(express.json());
 //   console.log(`review  server running on ${port}`);
 // });
 
-// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority`;
-const uri = "mongodb://0.0.0.0:27017/";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = "mongodb://0.0.0.0:27017/";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
