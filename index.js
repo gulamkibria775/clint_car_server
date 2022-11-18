@@ -154,6 +154,8 @@ app.use(express.json());
 // });
 
 // const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority`;
+// uri are link
+
 const uri =
   "mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority";
 // const uri = "mongodb://0.0.0.0:27017/";
