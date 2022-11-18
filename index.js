@@ -180,7 +180,7 @@ async function run() {
     // ];
 
     // const result = serviceCollection.insertMany(data);
-    // get
+    // get LInk
     app.get("/services", async (req, res) => {
       // const query = {};
       const cursor = serviceCollection.find();
@@ -200,6 +200,7 @@ async function run() {
       // console.log("read dta", data);
       res.send(service);
     });
+    // get link create
     app.get("/myreview", async (req, res) => {
       const query = {};
     });
