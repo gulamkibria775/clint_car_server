@@ -296,7 +296,7 @@ async function run() {
       const result = await orderCollection.updateOne(query, updatedDoc);
       res.send(result);
     });
-
+//  delete link
     app.delete("/services/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
@@ -309,6 +309,8 @@ async function run() {
 }
 run().catch((err) => console.error("err", err));
 
+
+// listing link
 app.listen(port, () => {
   console.log(`review  server running on ${port}`);
 });
