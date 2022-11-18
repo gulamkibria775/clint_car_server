@@ -155,7 +155,7 @@ app.use(express.json());
 
 // const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority`;
 const uri =
-  "mongodb+srv://${process.env.DB_USER}:zRynuDnc2CydPt5L@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority";
 // const uri = "mongodb://0.0.0.0:27017/";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
