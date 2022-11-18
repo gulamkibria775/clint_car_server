@@ -205,7 +205,7 @@ async function run() {
       const query = {};
     });
 
-    //  post
+    //  post link
     app.post("/services", async (req, res) => {
       const order = req.body;
       console.log("orederdr", order);
@@ -221,7 +221,7 @@ async function run() {
       console.log(result);
       res.send(result);
     });
-
+// post link is createa
     app.post("/services/:id", async (req, res) => {
       const id = req.params.id;
       console.log("id", id);
@@ -234,7 +234,7 @@ async function run() {
       res.send(service);
     });
 
-    // put
+    // put  link is create
     app.put("/services/:id", async (req, res) => {
       const id = req.params.id;
       const status = req.body;
