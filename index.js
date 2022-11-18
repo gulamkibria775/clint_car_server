@@ -260,7 +260,7 @@ async function run() {
       const result = await serviceCollection.updateOne(query, updatedDoc);
       res.send(result);
     });
-
+// put link
     app.put("/users/:id", async (req, res) => {
       const id = req.params.id;
       const filter = { _id: ObjectId(id) };
@@ -283,7 +283,7 @@ async function run() {
       res.send(result);
     });
 
-    // path
+    // path link
     app.patch("/orders/:id", async (req, res) => {
       const id = req.params.id;
       const status = req.body.status;
