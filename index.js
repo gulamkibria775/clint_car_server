@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
- require('dotenv').config();
+require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -31,7 +31,6 @@ app.use(express.json());
 //   try {
 //     console.log("db connects");
 //     const serviceCollection = client.db("geniusCar").collection("services");
-
 
 // console.log("db connects");
 // const serviceCollection = client.db("doctor").collection("services");
@@ -154,7 +153,9 @@ app.use(express.json());
 //   console.log(`review  server running on ${port}`);
 // });
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority`;
+// const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority`;
+const uri =
+  "mongodb+srv://${process.env.DB_USER}:zRynuDnc2CydPt5L@cluster0.gi9sxo8.mongodb.net/?retryWrites=true&w=majority";
 // const uri = "mongodb://0.0.0.0:27017/";
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -166,6 +167,7 @@ async function run() {
   try {
     console.log("db connects");
     const serviceCollection = client.db("doctor").collection("services");
+    console.log("servicecolleticon",serviceCollection)
     // const data = [
     //   { name: "kibria", title: "hello", comment: [] },
     //   { name: "jamal", title: "hello2", comment: [] },
@@ -246,6 +248,7 @@ async function run() {
                 img: status.img,
                 rating: status.rating,
                 message: status.message,
+                date:new Date(),
               },
             ],
           },
